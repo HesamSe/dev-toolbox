@@ -1,0 +1,13 @@
+# Aliases
+alias.integrate=!git fetch origin develop:develop && git merge develop --no-edit
+alias.drop=!git reset @{u} && git stash && git stash drop
+alias.patch=!git diff > changes.patch
+
+# user credentials
+user.name=hesamSe
+user.email=hesam.seyfollahi@gmail.com
+
+# signing commits
+user.signingkey=path/to/id_rsa.pub
+commit.gpgsign=true
+gpg.format=ssh
