@@ -1,13 +1,26 @@
-# Aliases
-alias.integrate=!git fetch origin develop:develop && git merge develop --no-edit
-alias.drop=!git reset @{u} && git stash && git stash drop
-alias.patch=!git diff > changes.patch
+# This is Git's per-user configuration file.
 
-# user credentials
-user.name=hesamSe
-user.email=hesam.seyfollahi@gmail.com
+[user]
+    name = hesamSe
+    email = hesam.seyfollahi@gmail.com
+    signingkey = path/to/public-key
 
-# signing commits
-user.signingkey=path/to/id_rsa.pub
-commit.gpgsign=true
-gpg.format=ssh
+[commit]
+    gpgsign = true
+
+[gpg]
+    format = ssh
+
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    ci = commit
+    lg = log --oneline --graph --decorate --all
+    amend = commit --amend --no-edit
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    undo = reset --soft HEAD~1
+    sync = !git fetch origin develop:develop && git merge develop --no-edit
+    drop = !git reset @{u} && git stash && git stash drop
+    patch = !git diff > changes.patch
