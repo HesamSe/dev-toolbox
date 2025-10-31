@@ -11,6 +11,10 @@
 [gpg]
     format = ssh
 
+[gpg "ssh"]
+        # this file has this format: <email> <public-key>
+        allowedSignersFile = ~/.config/git/allowed_signers
+
 [alias]
     st = status
     co = checkout
