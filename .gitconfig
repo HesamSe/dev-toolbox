@@ -3,7 +3,7 @@
 [user]
     name = hesamSe
     email = hesam.seyfollahi@gmail.com
-    signingkey = path/to/public-key
+    signingkey = path/to/private-key
 
 [commit]
     gpgsign = true
